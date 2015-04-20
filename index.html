@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Time To Dial</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="yes" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/angular/mobile-angular-ui-hover.css" />
+    <link rel="stylesheet" href="css/angular/mobile-angular-ui-base.css" />
+    <link rel="stylesheet" href="css/angular/mobile-angular-ui-desktop.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/angular/angular.min.js"></script>
+    <script src="js/angular/angular-route.min.js"></script>
+    <script src="js/angular/mobile-angular-ui.js"></script>
+    <!-- Required to use $swipe, $drag and Translate services -->
+    <script src="js/angular/mobile-angular-ui.gestures.js"></script>
+    <script src="js/style.js"></script>
+    <!---Font Awesome Icons--->
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+  </head>
+
+  <body ng-app="MobileAngularUiExamples" ng-controller="MainController">
+    <!-- Sidebars -->
+    <div ng-include="'sidebar.html'" ui-track-as-search-param='true' class="sidebar sidebar-left"></div>
+    <div ng-include="'sidebarRight.html'" class="sidebar sidebar-right"></div>
+    <div class="app" ng-swipe-right='Ui.turnOn("uiSidebarLeft")' ng-swipe-left='Ui.turnOff("uiSidebarLeft")'>
+    <!-- Navbars -->
+
+      <div class="navbar navbar-app navbar-absolute-top">
+        <div class="navbar-brand navbar-brand-center" ui-yield-to="title">
+          <img src="icon.png" title="Time To Dial" alt="Time To Dial" height="40px" width="auto"/>
+        </div>
+        <div class="btn-group pull-left">
+          <div ui-toggle="uiSidebarLeft" class="btn sidebar-toggle">
+            <i class="fa fa-bars"></i> Menu
+          </div>
+        </div>
+        <div class="btn-group pull-right" ui-yield-to="navbarAction">
+          <div class="btn">
+              <a href="tel:08065666666"><i class="fa fa-phone"></i> Call Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar navbar-app navbar-absolute-bottom">
+        <div class="btn-group justified">
+          <a href="index.html" class="btn btn-navbar"><i class="fa fa-home fa-navbar"></i> Home</a>
+          <a href="profile.html" class="btn btn-navbar"><i class="fa fa-user fa-navbar"></i> Profile</a>
+          <a href="information.html" class="btn btn-navbar"><i class="fa fa-upload"></i> Submit</a>
+        </div>
+      </div>
+
+      <!-- App Body -->
+      <div class="app-body" ng-class="{loading: loading}">
+        <div ng-show="loading" class="app-content-loading">
+          <i class="fa fa-spinner fa-spin loading-spinner"></i>
+        </div>
+        <div class="app-content">
+          <ng-view></ng-view>
+        </div>
+      </div>
+
+    </div><!-- ~ .app -->
+
+    <div ui-yield-to="modals"></div>
+
+    <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-53955658-2', 'timetodial.com');
+       ga('send', 'pageview');
+     </script>
+  </body>
+    <script type="text/javascript" src="js/libs/jquery.js"></script>
+        <script type="text/javascript" src="js/libs/jqm.js"></script>
+        <script type="text/javascript" src="js/libs/handlebars.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+</html>
+
