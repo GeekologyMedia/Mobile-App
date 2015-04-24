@@ -12,6 +12,8 @@
     <gap:config-file platform="ios" parent="CFBundleShortVersionString"><string>100</string></gap:config-file>
     <gap:platform name="ios" />
     <gap:platform name="android" />
+    <gap:platform name="windows" />
+    <gap:platform name="blackberry" />
 
     <gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" />
     <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.4.0" />
