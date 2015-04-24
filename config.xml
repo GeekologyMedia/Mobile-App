@@ -5,7 +5,7 @@
     <description>Dial Damn It! Search for restaurants, services, apparel, and much more.</description>
     <author email="info@timetodial.com" href="http://www.timetodial.com">TTD Webmaster</author>
 
-    <preference name="phonegap-version" value="3.6.3" />
+    <preference name="phonegap-version" value="3.7.0" />
     <preference name="android-minSdkVersion" value="14" /><!-- Android 4.0 is minimum supported -->
     <feature name="http://api.phonegap.com/1.0/device" />
     <gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" />
