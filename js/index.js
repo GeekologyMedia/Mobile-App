@@ -107,26 +107,6 @@ var app = {
 
     },
 
-    // Particular Post Retrieve
-
-    portfolio: function(){
-        $.ajax({
-            url: 'http://timetodial.com/api/get_recent_posts&post_type=portfolio',
-            type: 'GET',
-            dataType: 'json',
-            success: function(data){
-                var source   = $("#portfolio-template").html();
-                var template = Handlebars.compile(source);
-                var portfolioData = template(data);
-                $('#portfolio-data').html(portfolioData);
-                $('#portfolio-data').trigger('create');
-
-            },
-            error: function(data){
-                console.log(data);
-            }
-        });
-    },
 
     // Login Page Retreive
 
