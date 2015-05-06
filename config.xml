@@ -57,4 +57,5 @@
     <access origin="http://timetodial.com/*/" />
     <access uri="http://timetodial.com/*/" subdomains="true" />
     <allow-navigation href="http://timetodial.com/*" />
+    <allow-navigation href="http://timetodial.com/*/*/*/" />
 </widget>
