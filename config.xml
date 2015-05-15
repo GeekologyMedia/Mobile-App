@@ -65,6 +65,5 @@
     <gap:splash src="res/screen/ios/Deafult-568h-2x.png" gap:platform="ios" width="640" height="1136" />
 
     <content src="index.html" />
-    <access origin="http://timetodial.com" />
-    <access uri="http://timetodial.com" subdomains="true" />
+    <access origin="*" subdomains="true" />
 </widget>
